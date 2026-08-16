@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>VIT Bhopal - VTOP</title>
+
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+
+        /* =====================================================
+           GENERAL
+           ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #edf1f3;
+
+            color: #222;
+
+            overflow-x: hidden;
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        .header {
+
+            height: 70px;
+
+            width: 100%;
+
+            background: linear-gradient(
+                90deg,
+                #174b91,
+                #2780bd
+            );
+
+            display: flex;
+
+            align-items: center;
+
+            color: white;
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 9999;
+
+            box-shadow:
+                0 2px 7px rgba(0,0,0,0.25);
+        }
+
+
+        /* LEFT MENU */
+
+        .header-left-menu {
+
+            width: 75px;
+
+            height: 70px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 38px;
+
+            cursor: pointer;
+        }
+
+
+        /* VIT LOGO */
+
+        .vit-logo {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 43px;
+
+            font-weight: bold;
+
+            line-height: 1;
+        }
+
+
+        /* VERTICAL LINE */
+
+        .header-divider {
+
+            width: 1px;
+
+            height: 34px;
+
+            background: rgba(255,255,255,0.45);
+
+            margin-left: 20px;
+
+            margin-right: 18px;
+        }
+
+
+        /* CAMPUS */
+
+        .campus {
+
+            font-size: 24px;
+
+            white-space: nowrap;
+        }
+
+
+        /* RIGHT ICONS */
+
+        .header-right {
+
+            margin-left: auto;
+
+            height: 70px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 23px;
+
+            padding-right: 22px;
+        }
+
+
+        .header-right i {
+
+            color: white;
+
+            font-size: 31px;
+
+            cursor: pointer;
+        }
+
+
+        .header-right .fa-bars {
+
+            font-size: 38px;
+        }
+
+
+
+        /* =====================================================
+           MAIN PAGE
+           ===================================================== */
+
+        .page {
+
+            width: 100%;
+
+            padding-top: 55px;
+
+            padding-bottom: 80px;
+        }
+
+
+        /* =====================================================
+           MAIN WHITE CARD
+           ===================================================== */
+
+        .student-card {
+
+            width: 654px;
+
+            margin: 0 auto;
+
+            background: white;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 12px rgba(0,0,0,0.18),
+                0 15px 25px rgba(0,0,0,0.12);
+        }
+
+
+
+        /* =====================================================
+           STUDENT PROFILE
+           ===================================================== */
+
+        .profile {
+
+            padding:
+
+                75px
+
+                25px
+
+                50px
+
+                25px;
+        }
+
+
+        /*
+           IMPORTANT:
+
+           This remains a ROW on mobile.
+
+           This is how the original screenshot behaves.
+        */
+
+        .profile-row {
+
+            width: 100%;
+
+            display: flex;
+
+            align-items: flex-start;
+        }
+
+
+
+        /* =====================================================
+           PHOTO
+           ===================================================== */
+
+        .photo-column {
+
+            width: 230px;
+
+            min-width: 230px;
+
+            text-align: center;
+        }
+
+
+        .student-photo {
+
+            width: 230px;
+
+            height: 260px;
+
+            display: block;
+
+            object-fit: cover;
+
+            border:
+
+                3px
+
+                solid
+
+                #2d83b9;
+
+            border-radius: 25px;
+
+            background: white;
+        }
+
+
+        /* STUDENT NAME */
+
+        .student-name {
+
+            margin-top: 7px;
+
+            font-size: 27px;
+
+            font-weight: 500;
+
+            line-height: 1.55;
+
+            text-align: center;
+        }
+
+
+
+        /* =====================================================
+           STUDENT DETAILS
+           ===================================================== */
+
+        .student-details {
+
+            width: 365px;
+
+            min-width: 365px;
+
+            padding-left: 5px;
+
+            padding-top: 80px;
+        }
+
+
+        /* RED LABEL */
+
+        .field-label {
+
+            color: #aa3158;
+
+            font-size: 25px;
+
+            font-weight: 500;
+
+            line-height: 1.25;
+
+            margin-bottom: 15px;
+
+            white-space: nowrap;
+        }
+
+
+        /* NORMAL TEXT */
+
+        .field-value {
+
+            font-size: 22px;
+
+            line-height: 1.55;
+
+            margin-bottom: 35px;
+
+            white-space: normal;
+        }
+
+
+
+        /* =====================================================
+           INFORMATION SECTIONS
+           ===================================================== */
+
+        .sections {
+
+            padding:
+
+                0
+
+                55px
+
+                55px
+
+                55px;
+        }
+
+
+        .section {
+
+            margin-bottom: 42px;
+        }
+
+
+
+        /* =====================================================
+           SECTION HEADER
+           ===================================================== */
+
+        .section-header {
+
+            width: 100%;
+
+            min-height: 145px;
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            cursor: pointer;
+
+            color: white;
+
+            background:
+
+                linear-gradient(
+                    105deg,
+                    #194784,
+                    #2f71c1
+                );
+
+            border-top:
+
+                2px
+
+                solid
+
+                #174d91;
+
+            overflow: visible;
+        }
+
+
+
+        /* =====================================================
+           YELLOW FONT AWESOME ICON
+
+           This is intentionally styled similar to
+           the code you showed from the original VIT page.
+           ===================================================== */
+
+        .section-icon {
+
+            background: #fbc902;
+
+            padding: 10px 11px;
+
+            color: black;
+
+            width: 70px;
+
+            height: 65px;
+
+            position: absolute;
+
+            left: -1px;
+
+            top: 10px;
+
+            border-top-right-radius: 7px;
+
+            border-bottom-right-radius: 7px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 38px;
+
+            z-index: 10;
+        }
+
+
+
+        /* =====================================================
+           SECTION TITLE
+           ===================================================== */
+
+        .section-title {
+
+            margin-left: 165px;
+
+            padding-right: 45px;
+
+            font-size: 38px;
+
+            font-weight: 400;
+
+            line-height: 1.15;
+        }
+
+
+
+        /* =====================================================
+           SECTION ARROW
+           ===================================================== */
+
+        .section-arrow {
+
+            position: absolute;
+
+            right: 9px;
+
+            top: 50%;
+
+            transform:
+
+                translateY(-50%);
+
+            font-size: 31px;
+
+            color: #2874b8;
+
+            transition:
+                transform .25s ease;
+        }
+
+
+        /*
+           The arrow in the screenshot points upward
+           when the section is open.
+        */
+
+        .section.open
+        .section-arrow {
+
+            transform:
+
+                translateY(-50%)
+                rotate(0deg);
+        }
+
+
+        .section:not(.open)
+        .section-arrow {
+
+            transform:
+
+                translateY(-50%)
+                rotate(180deg);
+        }
+
+
+
+        /* =====================================================
+           COLLAPSIBLE CONTENT
+           ===================================================== */
+
+        .section-content {
+
+            max-height: 0;
+
+            overflow: hidden;
+
+            background: white;
+
+            transition:
+                max-height .35s ease;
+        }
+
+
+        .section.open
+        .section-content {
+
+            max-height: 1000px;
+        }
+
+
+
+        /* =====================================================
+           TABLE
+           ===================================================== */
+
+        .table-wrapper {
+
+            width: 100%;
+
+            padding:
+
+                40px
+
+                35px
+
+                25px;
+
+            overflow-x: auto;
+        }
+
+
+        .info-table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            font-size: 20px;
+        }
+
+
+        .info-table td {
+
+            border:
+
+                1px
+
+                solid
+
+                #d7d7d7;
+
+            padding:
+
+                17px
+
+                15px;
+
+            white-space: nowrap;
+        }
+
+
+        .info-table td:first-child {
+
+            width: 48%;
+
+            background: #d9d9d9;
+
+            font-weight: bold;
+        }
+
+
+        .info-table td:last-child {
+
+            background: #fff9ec;
+        }
+
+
+
+        /* =====================================================
+           MOBILE
+
+           IMPORTANT:
+           DO NOT STACK THE PROFILE.
+
+           The original screenshot keeps the large
+           desktop-style content on the phone.
+           ===================================================== */
+
+        @media (max-width: 700px) {
+
+
+            /*
+               Keep the page approximately the same
+               internal width as the original VIT page.
+            */
+
+            body {
+
+                overflow-x: auto;
+            }
+
+
+            .header {
+
+                min-width: 700px;
+
+                height: 70px;
+            }
+
+
+            .page {
+
+                width: 700px;
+
+                padding-top: 55px;
+            }
+
+
+            .student-card {
+
+                width: 654px;
+
+                margin-left: 28px;
+
+                margin-right: 18px;
+            }
+
+
+            /* PROFILE */
+
+            .profile-row {
+
+                display: flex;
+
+                flex-direction: row;
+
+                align-items: flex-start;
+            }
+
+
+            .photo-column {
+
+                width: 230px;
+
+                min-width: 230px;
+            }
+
+
+            .student-details {
+
+                width: 365px;
+
+                min-width: 365px;
+            }
+
+
+            /* SECTIONS */
+
+            .sections {
+
+                padding-left: 55px;
+
+                padding-right: 55px;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           PHONE WIDTHS
+
+           Prevent browser from trying to compress the
+           original layout.
+           ===================================================== */
+
+        @media (max-width: 500px) {
+
+            .header {
+
+                min-width: 700px;
+            }
+
+
+            .page {
+
+                width: 700px;
+            }
+
+
+            .student-card {
+
+                width: 654px;
+
+                margin-left: 28px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- =====================================================
+         VIT HEADER
+         ===================================================== -->
+
+    <header class="header">
+
+
+        <!-- LEFT MENU -->
+
+        <div class="header-left-menu">
+
+            <i class="fa fa-bars"></i>
+
+        </div>
+
+
+        <!-- VIT -->
+
+        <div class="vit-logo">
+
+            VIT
+
+        </div>
+
+
+        <!-- DIVIDER -->
+
+        <div class="header-divider"></div>
+
+
+        <!-- CAMPUS -->
+
+        <div class="campus">
+
+            (Bhopal Campus)
+
+        </div>
+
+
+        <!-- RIGHT ICONS -->
+
+        <div class="header-right">
+
+            <i class="fa fa-home"></i>
+
+            <i class="fa fa-print"></i>
+
+            <i class="fa fa-bars"></i>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN PAGE
+         ===================================================== -->
+
+    <main class="page">
+
+
+        <div class="student-card">
+
+
+            <!-- =================================================
+                 PROFILE
+                 ================================================= -->
+
+            <section class="profile">
+
+
+                <div class="profile-row">
+
+
+                    <!-- ================= PHOTO ================= -->
+
+                    <div class="photo-column">
+
+
+                        <img
+                            src="profile.png"
+                            alt="Student Photo"
+                            class="student-photo"
+                        >
+
+
+                        <div class="student-name">
+
+                            AGRIM 
+
+                            ROHELLA
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- ================= DETAILS ================= -->
+
+                    <div class="student-details">
+
+
+                        <!-- REGISTER NUMBER -->
+
+                        <div class="field-label">
+
+                            REGISTER NUMBER:
+
+                        </div>
+
+
+                        <div class="field-value">
+
+                            25BAI10439
+
+                        </div>
+
+
+
+                        <!-- EMAIL -->
+
+                        <div class="field-label">
+
+                            VIT EMAIL:
+
+                        </div>
+
+
+                        <div class="field-value">
+
+                            agrim.25bai10439@vitbhopal.ac.in
+
+                        </div>
+
+
+
+                        <!-- PROGRAM -->
+
+                        <div class="field-label">
+
+                            PROGRAM &amp; BRANCH:
+
+                        </div>
+
+
+                        <div class="field-value">
+
+                            BTECH - Computer Science and
+                            Engineering (Artificial
+                            Intelligence and Machine
+                            Learning)
+
+                        </div>
+
+
+
+                        <!-- SCHOOL -->
+
+                        <div class="field-label">
+
+                            SCHOOL NAME:
+
+                        </div>
+
+
+                        <div class="field-value">
+
+                            School of Computing Science
+                            Engineering and Artificial
+                            Intelligence (SCAI)
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 INFORMATION SECTIONS
+                 ================================================= -->
+
+            <div class="sections">
+
+
+
+                <!-- =================================================
+                     PERSONAL INFORMATION
+                     ================================================= -->
+
+                <div class="section open">
+
+
+                    <div
+                        class="section-header"
+                        onclick="toggleSection(this)"
+                    >
+
+
+                        <i
+                            class="fa fa-address-book-o section-icon"
+                        ></i>
+
+
+                        <div class="section-title">
+
+                            PERSONAL<br>
+
+                            INFORMATION
+
+                        </div>
+
+
+                        <i
+                            class="fa fa-angle-up section-arrow"
+                        ></i>
+
+
+                    </div>
+
+
+
+                    <div class="section-content">
+
+
+                        <div class="table-wrapper">
+
+
+                            <table class="info-table">
+
+
+                                <tr>
+
+                                    <td>
+                                        Name
+                                    </td>
+
+                                    <td>
+                                        Agrim Rohella
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Gender
+                                    </td>
+
+                                    <td>
+                                        Male
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Nationality
+                                    </td>
+
+                                    <td>
+                                        Indian
+                                    </td>
+
+                                </tr>
+
+
+                            </table>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     EDUCATIONAL INFORMATION
+                     ================================================= -->
+
+                <div class="section">
+
+
+                    <div
+                        class="section-header"
+                        onclick="toggleSection(this)"
+                    >
+
+
+                        <i
+                            class="fa fa-graduation-cap section-icon"
+                        ></i>
+
+
+                        <div class="section-title">
+
+                            EDUCATIONAL<br>
+
+                            INFORMATION
+
+                        </div>
+
+
+                        <i
+                            class="fa fa-angle-up section-arrow"
+                        ></i>
+
+
+                    </div>
+
+
+
+                    <div class="section-content">
+
+
+                        <div class="table-wrapper">
+
+
+                            <table class="info-table">
+
+
+                                <tr>
+
+                                    <td>
+                                        Program
+                                    </td>
+
+                                    <td>
+                                        BTECH
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Branch
+                                    </td>
+
+                                    <td>
+                                        Computer Science and Engineering
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Specialization
+                                    </td>
+
+                                    <td>
+                                        Artificial Intelligence and
+                                        Machine Learning
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        School
+                                    </td>
+
+                                    <td>
+                                        School of Computing Science
+                                        Engineering and Artificial
+                                        Intelligence
+                                    </td>
+
+                                </tr>
+
+
+                            </table>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     FAMILY INFORMATION
+                     ================================================= -->
+
+                <div class="section">
+
+
+                    <div
+                        class="section-header"
+                        onclick="toggleSection(this)"
+                    >
+
+
+                        <i
+                            class="fa fa-users section-icon"
+                        ></i>
+
+
+                        <div class="section-title">
+
+                            FAMILY<br>
+
+                            INFORMATION
+
+                        </div>
+
+
+                        <i
+                            class="fa fa-angle-up section-arrow"
+                        ></i>
+
+
+                    </div>
+
+
+
+                    <div class="section-content">
+
+
+                        <div class="table-wrapper">
+
+
+                            <table class="info-table">
+
+
+                                <tr>
+
+                                    <td>
+                                        Father's Name
+                                    </td>
+
+                                    <td>
+                                        —
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Mother's Name
+                                    </td>
+
+                                    <td>
+                                        —
+                                    </td>
+
+                                </tr>
+
+
+                            </table>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     PROCTOR INFORMATION
+                     ================================================= -->
+
+                <div class="section">
+
+
+                    <div
+                        class="section-header"
+                        onclick="toggleSection(this)"
+                    >
+
+
+                        <i
+                            class="fa fa-user-circle-o section-icon"
+                        ></i>
+
+
+                        <div class="section-title">
+
+                            PROCTOR<br>
+
+                            INFORMATION
+
+                        </div>
+
+
+                        <i
+                            class="fa fa-angle-up section-arrow"
+                        ></i>
+
+
+                    </div>
+
+
+
+                    <div class="section-content">
+
+
+                        <div class="table-wrapper">
+
+
+                            <table class="info-table">
+
+
+                                <tr>
+
+                                    <td>
+                                        Proctor Name
+                                    </td>
+
+                                    <td>
+                                        —
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Proctor Email
+                                    </td>
+
+                                    <td>
+                                        —
+                                    </td>
+
+                                </tr>
+
+
+                            </table>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     HOSTEL INFORMATION
+                     ================================================= -->
+
+                <div class="section open">
+
+
+                    <div
+                        class="section-header"
+                        onclick="toggleSection(this)"
+                    >
+
+
+                        <i
+                            class="fa fa-home section-icon"
+                        ></i>
+
+
+                        <div class="section-title">
+
+                            HOSTEL<br>
+
+                            INFORMATION
+
+                        </div>
+
+
+                        <i
+                            class="fa fa-angle-up section-arrow"
+                        ></i>
+
+
+                    </div>
+
+
+
+                    <div class="section-content">
+
+
+                        <div class="table-wrapper">
+
+
+                            <table class="info-table">
+
+
+                                <tr>
+
+                                    <td>
+                                        Application Number
+                                    </td>
+
+                                    <td>
+                                        2025144970
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Register Number
+                                    </td>
+
+                                    <td>
+                                        25BAI10439
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Block Name
+                                    </td>
+
+                                    <td>
+                                        MENS HOSTEL BLOCK-4
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Room No.
+                                    </td>
+
+                                    <td>
+                                        A502
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Bed Type
+                                    </td>
+
+                                    <td>
+                                        4- BED -ACPB
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Mess Information
+                                    </td>
+
+                                    <td>
+                                        NON VEG - M/S MAYURI CATERERS
+                                    </td>
+
+                                </tr>
+
+
+                            </table>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script>
+
+        function toggleSection(header) {
+
+            const section =
+                header.parentElement;
+
+            section.classList.toggle("open");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
